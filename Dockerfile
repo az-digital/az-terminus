@@ -3,7 +3,7 @@ FROM uadrupal/base_drush_composer:1.0.1
 # Install CGR
 RUN composer global require consolidation/cgr:2.0.4
 
-# Install terminus.
+# Install terminus
 RUN cgr pantheon-systems/terminus:1.8.0
 
 # Set up ~/.ssh

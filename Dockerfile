@@ -4,12 +4,13 @@ FROM uadrupal/base_drush_composer:1.0.1
 RUN composer global require consolidation/cgr:2.0.4
 
 # Install terminus
-RUN cgr pantheon-systems/terminus:1.8.0
+RUN cgr pantheon-systems/terminus:1.8.1
 
 # Cherry-pick the scripts we actually want from the complete repo.
 RUN cd /tmp \
   && git clone -b '1.4.1' https://bitbucket.org/ua_drupal/uaqs_repository_tools.git \
   && cp uaqs_repository_tools/reposync.sh /usr/local/bin/reposync \
+  && cp uaqs_repository_tools/tagsplits.sh /usr/local/bin/tagsplits \
   && rm -Rf uaqs_repository_tools
 
 # Set up ~/.ssh

@@ -10,7 +10,6 @@ RUN cgr pantheon-systems/terminus:1.8.1
 RUN cd /tmp \
   && git clone -b '1.4.1' https://bitbucket.org/ua_drupal/uaqs_repository_tools.git \
   && cp uaqs_repository_tools/reposync.sh /usr/local/bin/reposync \
-  && cp uaqs_repository_tools/tagsplits.sh /usr/local/bin/tagsplits \
   && rm -Rf uaqs_repository_tools
 
 # Set up ~/.ssh

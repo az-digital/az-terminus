@@ -17,3 +17,6 @@ RUN mkdir $HOME/.ssh \
   && echo "Host *.drush.in\n    StrictHostKeyChecking no" >> $HOME/.ssh/config \
   && chmod 700 $HOME/.ssh \
   && chmod 600 $HOME/.ssh/*
+
+RUN apt-get -y update && apt-get -y install procps
+

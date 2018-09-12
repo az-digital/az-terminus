@@ -4,7 +4,7 @@ FROM uadrupal/base_drush_composer:1.0.1
 RUN composer global require consolidation/cgr:2.0.4
 
 # Install terminus
-RUN cgr pantheon-systems/terminus:1.8.1
+RUN cgr pantheon-systems/terminus:1.9.0
 
 # Cherry-pick the scripts we actually want from the complete repo.
 RUN cd /tmp \

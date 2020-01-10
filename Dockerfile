@@ -7,7 +7,7 @@ RUN composer global require consolidation/cgr:2.0.5
 RUN cgr pantheon-systems/terminus:2.2.0
 
 # Install jq
-apt-get update -y && apt-get install -y jq
+RUN apt-get update -y && apt-get install -y jq
 
 # Cherry-pick the scripts we actually want from the complete repo.
 RUN cd /tmp \

@@ -4,7 +4,10 @@ FROM uadrupal/base_drush_composer:2.0.0
 RUN composer global require consolidation/cgr:2.0.5
 
 # Install terminus
-RUN cgr pantheon-systems/terminus:2.1.0
+RUN cgr pantheon-systems/terminus:2.2.0
+
+# Install jq
+apt-get install -y jq
 
 # Cherry-pick the scripts we actually want from the complete repo.
 RUN cd /tmp \
